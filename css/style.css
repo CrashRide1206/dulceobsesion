@@ -1,0 +1,109 @@
+/* style.css - Dulce Obsesion (colocar en /css/style.css) */
+
+/* Paleta */
+:root{
+  --rojo-1: #c62828; /* rojo fuerte */
+  --rojo-2: #ef5350; /* rojo medio */
+  --rosa-pastel: #ffdada; /* pastel */
+  --beige: #fff3e0;
+  --texto: #2b2b2b;
+  --max-width: 1200px;
+}
+
+/* Tipografías */
+body{
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  color: var(--texto);
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.about-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Loader 
+.loader{
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 2000;
+  transition: opacity .35s ease;
+}
+.brand-loader{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  color: var(--rojo-1);
+}*/
+
+/* HERO */
+.hero{
+  background: linear-gradient(180deg, rgba(255,234,234,0.6), rgba(255,244,240,0.6)), url('../images/Variedad.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  min-height: 360px;
+}
+.brand{
+  font-family: 'Dancing Script', cursive;
+  color: var(--rojo-1);
+  font-size: 2rem;
+}
+
+/* Cards */
+.product-card img{ height: 220px; object-fit: cover; border-top-left-radius: .375rem; border-top-right-radius: .375rem; }
+.card { border-radius: .6rem; }
+
+/* Badges */
+.badge-available{ background: linear-gradient(90deg,var(--rojo-2),var(--rojo-1)); }
+
+/* Gallery */
+.gallery-img{ height: 180px; object-fit: cover; width: 100%; border-radius: 8px; }
+
+/* Floating buttons */
+.whatsapp-fab{ position: fixed; right: 20px; bottom: 20px; z-index: 1070; }
+.floating-cta{ position: fixed; left: 20px; bottom: 20px; z-index: 1070; }
+.btn-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #fff;
+  background-color: #25D366;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, bottom 0.3s ease;
+}
+
+.btn-cotizar {
+  background-color: #e63946;
+  bottom: 90px; /* un poco más arriba */
+}
+
+.btn-flotante.stopped {
+  position: absolute; /* cambia a absoluta cuando llega al footer */
+}
+/* Footer */
+footer a{ color: inherit; text-decoration: underline; }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero{ padding: 4rem 1rem; min-height: 320px; }
+  .product-card img{ height: 180px; }
+  .gallery-img{ height: 140px; }
+}
+
+/* Smooth scroll behavior (in case browser supports it) */
+html { scroll-behavior: smooth; }
