@@ -57,7 +57,7 @@
     var producto = document.getElementById('pedidoProducto').value || '';
     var detalles = document.getElementById('pedidoDetalles').value || '';
     var text = encodeURIComponent('Hola, soy ' + nombre + ' ('+telefono+'). Me interesa: ' + producto + '. Detalles: ' + detalles);
-    window.open('https://wa.me/573000000000?text=' + text, '_blank');
+    window.open('https://wa.me/573102433009?text=' + text, '_blank');
     // cerrar modal
     var pedidoModalEl = document.getElementById('pedidoModal');
     try{
@@ -77,7 +77,7 @@
       if(this.classList.contains('disabled')) return;
       var name = this.getAttribute('data-product-name') || '';
       var text = encodeURIComponent('Hola, quisiera pedir: ' + name);
-      window.open('https://wa.me/573000000000?text=' + text, '_blank');
+      window.open('https://wa.me/573102433009?text=' + text, '_blank');
     });
   });
 })();
